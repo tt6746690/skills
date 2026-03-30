@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex Approval Tuning"
+  short_description: "Tune Codex approvals and allow-rules"
+  default_prompt: "Use $codex-approval-rules-tuning to inspect my Codex config, rules, and local session history, then propose lower-friction approval settings without weakening important safety boundaries."

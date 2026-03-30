@@ -1,0 +1,22 @@
+{
+  "name": "wpq-agent-skills",
+  "owner": {
+    "name": "wpq"
+  },
+  "metadata": {
+    "description": "Shared agent skills for development workflows",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "dev-workflow-skills",
+      "description": "Development workflow skills including git worktrees, Codex approval tuning, and more",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/using-git-worktrees",
+        "./skills/codex-approval-rules-tuning"
+      ]
+    }
+  ]
+}
