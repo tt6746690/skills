@@ -103,8 +103,11 @@ needs most right now.
 APIs or data you haven't seen, or an open question can be answered empirically.
 
 1. **Identify the unknown** — be specific about what you're testing
-2. **Probe it** — write a small script, call the API, fetch sample data, read
-   the docs, whatever gets you facts
+2. **Probe or survey** — two flavors depending on the unknown:
+   - **Probe**: run something (script, API call, sample data) to learn a fact
+   - **Survey**: read existing code, docs, or interfaces to map constraints
+     and available building blocks (e.g., "what types/functions already exist
+     that this plan should use?")
 3. **Capture findings** — write a findings document with concrete examples,
    edge cases, and implications for the plan
 4. **Feed back** — update the plan: resolve questions, revise decisions,
@@ -154,6 +157,21 @@ Examples of targeted refinement:
 - **Data audit** — run sample data through the planned pipeline
 - **Simplification** — remove complexity that evidence shows is unnecessary
 - **Structural revision** — revisit module boundaries, file organization, naming
+
+### Mode: Maintain
+
+**Enter when:** A batch of changes has been applied (investigation findings,
+review fixes, new sub-plans) and the plan documents need housekeeping.
+
+This is the mechanical work that keeps plans trustworthy:
+- Bump version numbers on changed plans
+- Propagate findings into "What We Already Know" or assumption tables
+- Update shared vocabulary tables with new types or renames
+- Verify sub-plan sync versions match the master plan version
+- Grep for stale references after any rename
+
+Maintenance is lightweight but accumulates if skipped. Do it after each
+logical batch of changes, not in a big pass at the end.
 
 ---
 
@@ -266,6 +284,7 @@ Use this for a proactive review pass:
 - [ ] Shared vocabulary matches interface sketches
 - [ ] Sub-plan versions are synced with master plan
 - [ ] Interface signatures are consistent across all plans
+- [ ] Code sketches match the real types they reference (field names, types, method signatures)
 - [ ] No implicit assumptions that should be explicit
 - [ ] Investigation findings are reflected in the plan
 - [ ] Chunk dependencies are correct and acyclic
@@ -320,8 +339,9 @@ in domain-specific wrappers.
 
 ## Practical Tips
 
-- **Commit periodically** — after each logical unit of plan work, not in
-  large batches.
+- **Commit periodically** — after each logical unit of plan work (a batch
+  of fixes, a new sub-plan, investigation findings), not in large batches.
+  Use judgment on granularity; the goal is reviewable, describable commits.
 - **Plans are not code** — sketches show intent and interface shape, not final
   implementation.
 - **Let investigation kill scope** — if data shows a feature is unnecessary,

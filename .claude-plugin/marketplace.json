@@ -17,6 +17,11 @@
       "name": "codex-approval-rules-tuning",
       "description": "Skill for Codex approval rules tuning",
       "source": { "source": "directory", "path": "./skills/codex-approval-rules-tuning" }
+    },
+    {
+      "name": "plan-iteration",
+      "description": "Iterate on complex, multi-file implementation plans through investigation, drafting, review, and refinement cycles",
+      "source": { "source": "directory", "path": "./skills/plan-iteration" }
     }
   ]
 }
