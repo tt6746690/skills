@@ -38,16 +38,27 @@ Restart Codex after installing to pick up new skills.
 
 ### Claude Code
 
+#### From GitHub
+
 Register this repo as a plugin marketplace:
 
 ```
 /plugin marketplace add tt6746690/skills
 ```
 
-Then install the plugin:
+#### From a local clone
+
+If you have this repo cloned locally (e.g. `~/github/skills`):
 
 ```
-/plugin install dev-workflow-skills@wpq-agent-skills
+/plugin marketplace add ~/github/skills
+```
+
+Then install individual plugins:
+
+```
+/plugin install using-git-worktrees@wpq-skills
+/plugin install codex-approval-rules-tuning@wpq-skills
 ```
 
 ## Repo Structure

@@ -1,5 +1,5 @@
 {
-  "name": "wpq-agent-skills",
+  "name": "wpq-skills",
   "owner": {
     "name": "wpq"
   },
@@ -9,14 +9,14 @@
   },
   "plugins": [
     {
-      "name": "dev-workflow-skills",
-      "description": "Development workflow skills including git worktrees, Codex approval tuning, and more",
-      "source": "./",
-      "strict": false,
-      "skills": [
-        "./skills/using-git-worktrees",
-        "./skills/codex-approval-rules-tuning"
-      ]
+      "name": "using-git-worktrees",
+      "description": "Skill for using git worktrees",
+      "source": { "source": "directory", "path": "./skills/using-git-worktrees" }
+    },
+    {
+      "name": "codex-approval-rules-tuning",
+      "description": "Skill for Codex approval rules tuning",
+      "source": { "source": "directory", "path": "./skills/codex-approval-rules-tuning" }
     }
   ]
 }
