@@ -107,8 +107,9 @@ APIs or data you haven't seen, or an open question can be answered empirically.
    the docs, whatever gets you facts
 3. **Capture findings** — write a findings document with concrete examples,
    edge cases, and implications for the plan
-4. **Feed back** — update the plan: resolve questions, revise decisions, fix
-   sketches, bump the version
+4. **Feed back** — update the plan: resolve questions, revise decisions,
+   update assumption tables (change impact/relaxation if evidence shifted),
+   fix sketches, bump the version
 
 **Anti-pattern:** Detailed plans for systems you haven't touched yet.
 
@@ -118,8 +119,10 @@ APIs or data you haven't seen, or an open question can be answered empirically.
 changes have accumulated since the last review.
 
 Read the full plan with fresh eyes and produce a numbered list of observations
-(A, B, C...). For each item: what's the issue, why it matters, and a
-recommendation. Present to the user for discussion before making changes.
+(A, B, C...). For each item include: the problem, why it matters, concrete
+options with tradeoffs, and a recommendation. Aim for enough depth that the
+user can make a decision without follow-up — but don't pad with filler. The
+user may ask to expand or compress, so be ready to adjust.
 
 Review questions to ask:
 - What's missing or underspecified?
@@ -136,6 +139,11 @@ Review questions to ask:
 2. Apply changes to the most specific file (sub-plan over master plan)
 3. Cross-check consistency — grep all plans when changing any name or interface
 4. Commit after each batch of related changes
+
+**Batch execution:** When the user approves multiple items at once ("do
+everything"), separate them into investigations (need data) vs plan edits
+(can apply now). Kick off investigations in the background, apply plan
+edits in parallel while waiting. This avoids blocking on slow data fetches.
 
 ### Mode: Refine
 
