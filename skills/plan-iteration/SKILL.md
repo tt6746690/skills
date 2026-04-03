@@ -201,11 +201,19 @@ Before building infrastructure:
 Record findings even when the answer is "nothing fits" — that's useful
 context for why we're building it ourselves.
 
-### Scale and Evolution
+### Data Model and Interface Design
 
-- What happens when the data grows 10x?
-- Which parts of the plan are hardest to change later?
-- If we had to add a second use case, what would need to be generalized?
+Examine the plan's data models, interfaces, and class hierarchies:
+- Are the right things modeled as data vs. behavior?
+- Are there models that mix concerns (config + results, input + derived)?
+- Could a flatter structure work, or does the hierarchy earn its complexity?
+- Are interfaces minimal — do consumers need everything the producer exposes?
+- Are there implicit data transformations that should be explicit types?
+- Look at how similar systems in the domain model these concepts — is there a
+  more natural decomposition we're missing?
+
+This lens is especially valuable early, because data model mistakes are
+expensive to fix once code depends on them.
 
 ### Using These Lenses
 
