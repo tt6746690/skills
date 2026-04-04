@@ -342,36 +342,15 @@ human) picking up the project later can read the findings to understand
 re-litigating settled decisions and surfaces constraints that aren't obvious
 from the plan alone.
 
-### Structure
+### Writing tips
 
-Keep it concise and organized by insight, not by conversation order:
-
-```markdown
-# Descriptive Title
-
-**Date:** YYYY-MM-DD
-**Storage:** path or N/A
-
-Brief description of what was investigated and why.
-
-## Key Insight (the most important takeaway)
-...
-
-## Approaches Considered
-### Approach A: ...
-**Rejected.** Reason.
-### Approach B: ...
-**Chosen.** Reason.
-
-## Chosen Approach: Details
-...
-
-## Implications for Other Components
-...
-```
-
-Link the findings doc from the relevant plan section and from "What We
-Already Know" in the master plan.
+- Organize by insight, not by conversation order — synthesize the
+  discussion into logical sections
+- Cover what was considered and why alternatives were rejected, not just
+  the winning approach
+- Keep it concise — the goal is future reference, not a transcript
+- Link the findings doc from the relevant plan section so readers can
+  find the detailed reasoning when needed
 
 ---
 
