@@ -103,14 +103,20 @@ needs most right now.
 APIs or data you haven't seen, or an open question can be answered empirically.
 
 1. **Identify the unknown** — be specific about what you're testing
-2. **Probe or survey** — two flavors depending on the unknown:
+2. **Navigate context first** — before designing or proposing, read the
+   relevant code, configs, and existing implementations. Check whether the
+   problem is already solved (or partially solved) by what exists. Many
+   design questions dissolve once you see the actual code. This applies
+   during review and refinement too — don't propose changes to interfaces
+   you haven't read.
+3. **Probe or survey** — two flavors depending on the unknown:
    - **Probe**: run something (script, API call, sample data) to learn a fact
    - **Survey**: read existing code, docs, or interfaces to map constraints
      and available building blocks (e.g., "what types/functions already exist
      that this plan should use?")
-3. **Capture findings** — write a findings document with concrete examples,
-   edge cases, and implications for the plan
-4. **Feed back** — update the plan: resolve questions, revise decisions,
+4. **Capture findings** — write a findings document with concrete examples,
+   edge cases, and implications for the plan (see "Findings Documents" below)
+5. **Feed back** — update the plan: resolve questions, revise decisions,
    update assumption tables (change impact/relaxation if evidence shifted),
    fix sketches, bump the version
 
@@ -303,6 +309,69 @@ Plans with multiple files drift out of sync. Prevent this:
   synced with. After updating the master, check which sub-plans need updating.
 - **Cross-plan updates** — when changing a name or interface in one plan,
   search all others. Do a reflection pass after batches of updates.
+
+---
+
+## Findings Documents
+
+Investigations and extended design discussions often produce insights worth
+preserving beyond the plan itself. When this happens, consider writing a
+**findings document** in a one-off directory alongside the plan.
+
+### When to write a findings doc
+
+- An investigation produced data, measurements, or API exploration results
+- A design discussion explored multiple approaches with tradeoffs before
+  converging (e.g., caching strategies, data model options)
+- The reasoning behind a decision is too detailed for the plan but valuable
+  for future reference
+
+### What goes in a findings doc vs. the plan
+
+- **Findings doc**: The journey — options considered, why each was
+  rejected/chosen, verification steps, gotchas discovered, concrete
+  examples. Organized by logical sections (not chronologically).
+- **Plan**: The conclusion — the decided approach, key constraints, and a
+  link to the findings doc for context.
+
+### Why this matters
+
+Findings docs serve as context for future sessions. A coding agent (or
+human) picking up the project later can read the findings to understand
+*why* a design was chosen, not just *what* was chosen. This prevents
+re-litigating settled decisions and surfaces constraints that aren't obvious
+from the plan alone.
+
+### Structure
+
+Keep it concise and organized by insight, not by conversation order:
+
+```markdown
+# Descriptive Title
+
+**Date:** YYYY-MM-DD
+**Storage:** path or N/A
+
+Brief description of what was investigated and why.
+
+## Key Insight (the most important takeaway)
+...
+
+## Approaches Considered
+### Approach A: ...
+**Rejected.** Reason.
+### Approach B: ...
+**Chosen.** Reason.
+
+## Chosen Approach: Details
+...
+
+## Implications for Other Components
+...
+```
+
+Link the findings doc from the relevant plan section and from "What We
+Already Know" in the master plan.
 
 ---
 
