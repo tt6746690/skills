@@ -1,0 +1,8 @@
+# Claude Code project-local skill loading (skills live in skills/, served via plugin)
+.claude/
+
+# skill-creator eval run outputs (large, machine-specific)
+skills/paper-review-workspace/
+
+# skill-creator eval definitions (kept locally, not shared)
+skills/*/evals/
