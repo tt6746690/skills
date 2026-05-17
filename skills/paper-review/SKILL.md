@@ -62,7 +62,7 @@ Then three parts.
 
 Goal: a reader who has **not** read the paper grasps its core contribution
 quickly. Prefer illustration, structure, and concrete examples over long prose.
-Be concise.
+Be concise and skimmable — prefer structure over prose by default.
 
 A menu of techniques — use whichever fit this paper, in any order, and **invent
 others when they would help more**:
@@ -89,63 +89,77 @@ Hard rules:
 - Schematics carry flow and structure in **plain words** — no equations or bare
   symbols inside a diagram (they make ASCII art unreadable). Put math in its own
   Markdown math block, separate from the diagram.
-- Wherever math appears, immediately gloss **every** symbol in plain language
-  and say what it is for. Never leave un-explained notation anywhere.
+- Wherever math appears, make it easy to understand — explain what it computes
+  and why, and clarify any notation a reader would stumble on.
 - Link external concepts (methods, metrics, datasets) inline at first mention to
   a Wikipedia/arXiv URL — no separate link dump.
 - Bold key terms and key takeaways — not everything.
 
 ### Part 2 — In-depth review (critique that teaches)
 
-A teaching critique for someone who hasn't read the paper: re-ground every point
-so it stands on its own — restate the mechanism, never just "the result on p.11
-is fragile". Intuition-first, references attached, illustrations or examples
-where they help.
+*Goal:* a teaching critique for someone who hasn't read the paper — re-ground
+every point so it stands on its own (restate the mechanism, never just "the
+result on p.11 is fragile"). Intuition-first, references attached, illustrations
+or examples where they help. Cover strengths and weaknesses at **equal depth**.
 
-Cover strengths and weaknesses at **equal depth**. For each point the reader
-should come away knowing: **what** it is (concretely, with a page ref); **why it
-matters** (the mechanism — why it changes a conclusion); **how serious** it is
-(blocking vs. addressable; credit the paper if it already discloses the limit);
-and, for weaknesses, **what would resolve it**. These are the questions to
-answer, not a rigid template. But keep each point **scannable**: put what / why
-it matters / how serious / what would resolve on their own labelled lines, and
-separate consecutive points with a horizontal rule (`---`). You are free to
-expand a subtle point, intersperse a small example, mini-table, or schematic,
-and vary length — but not free to wall-of-text. An example or sketch beats a
-dense paragraph; don't pad the simple or compress the subtle.
+*Per point — answer four questions* (questions to answer, not a rigid template):
 
-Order **both** strengths and weaknesses most-important-first (just order them —
-no ordering caption in the output). Tag each weakness (🔴 blocking · 🟠 major ·
-🟡 minor) and each strength (🟢 decisive · ⚪ supporting).
-Close with **What would change my rating** (up/down conditions) and **What I
+- **what** it is — concretely, with a page ref;
+- **why it matters** — the mechanism, why it changes a conclusion;
+- **how serious** it is — blocking vs. addressable; credit the paper if it
+  already discloses the limit;
+- **what would resolve it** — for weaknesses.
+
+*Formatting:* keep each point **scannable** — render the facets as a bullet
+list, one bullet per facet (`- *What:* …`), each a tight clause, not a run of
+contiguous lines (which Markdown collapses into one paragraph). Separate
+consecutive points with a horizontal rule (`---`). You are free to expand a
+subtle point, intersperse a small example, mini-table, or schematic, and vary
+length — but not free to wall-of-text. An example or sketch beats a dense
+paragraph; don't pad the simple or compress the subtle.
+
+*Order & tag:* order **both** strengths and weaknesses most-important-first
+(just order them — no ordering caption in the output). Tag each weakness
+(🔴 blocking · 🟠 major · 🟡 minor) and each strength (🟢 decisive · ⚪ supporting).
+
+*Close with:* **What would change my rating** (up/down conditions) and **What I
 deliberately do not over-weight** — pre-empt the obvious-but-weak objection and
 explain why the real problem is a *combination*.
 
-Honesty: separate blocking from addressable; don't inflate nits; credit
+*Honesty:* separate blocking from addressable; don't inflate nits; credit
 self-disclosed limits; never assert a flaw you can't pin to a page.
 
 ### Part 3 — Final review (copy-paste into the form)
 
-Plain text, no links/emoji/section-IDs, paste-ready. Cover exactly the rubric's
-fields in its order. Write strengths and weaknesses as bullet lists where each
-bullet opens with a few bold lead words then one concise claim+evidence
-sentence — scannable, not prose paragraphs. In this section, each bullet and
-paragraph is a single unwrapped line — no newlines inside it, however long
-(literal mid-bullet newlines break when pasted into a form textarea). Order
-strengths and weaknesses most-important-first. End with the rating: your
-recommendation plus the single analysis that would move it, noting the number is
-the reviewer's to set.
+*Format:* plain text, no links/emoji/section-IDs, paste-ready. Cover exactly the
+rubric's fields in its order. Each bullet and paragraph is a single unwrapped
+line — no newlines inside it, however long (literal mid-bullet newlines break
+when pasted into a form textarea).
 
-Parts 2 and 3 are intentionally redundant (deep vs. submittable). Sync
-direction is **Part 2 → Part 3**: revise the Part 2 point first, then
-regenerate the affected Part 3 bullet from it. But the reviewer edits Part 3
-directly before submitting — once they have, their Part 3 wording is
-authoritative: never auto-revert it to match Part 2, and fold Part 2 changes
-into it only when explicitly asked. Reviewer-introduced drift is expected and
-fine. Parts 1–2 are the reviewer's private working
-notes (label them so: "for my own reference", "not for submission") — teaching
-expansions and the Q&A belong here and may be verbose; Part 3 is the only
-submitted text and stays lean.
+*Structure:* write strengths and weaknesses as bullet lists where each bullet
+opens with a few bold lead words then one concise claim+evidence sentence —
+scannable, not prose paragraphs. Order strengths and weaknesses
+most-important-first.
+
+*Ending:* end with the rating — your recommendation plus the single analysis
+that would move it, noting the number is the reviewer's to set.
+
+*Voice:* write it in the reviewer's own voice — first person, plain and direct,
+lightly personal, minimal jargon; when a plain phrase and a technical term both
+work, choose the plain one. It should read like a person wrote it, not a stiff
+template.
+
+Parts 2 and 3 are intentionally redundant (deep vs. submittable):
+
+- **Sync direction — Part 2 → Part 3.** Revise the Part 2 point first, then
+  regenerate the affected Part 3 bullet from it.
+- **Part 3 is authoritative once the reviewer edits it.** The reviewer edits
+  Part 3 directly before submitting — never auto-revert it to match Part 2, and
+  fold Part 2 changes into it only when explicitly asked. Reviewer-introduced
+  drift is expected and fine.
+- **Parts 1–2 are private working notes.** Label them so ("for my own
+  reference", "not for submission") — teaching expansions and the Q&A belong
+  here and may be verbose; Part 3 is the only submitted text and stays lean.
 
 ## Reviewer follow-ups (after the first draft)
 
@@ -181,10 +195,17 @@ the artifact's structure:
 
 ## Style
 
-Concise over complete — every sentence must change what the reviewer knows or
-does. In every part, including the critique, an example or sketch beats a dense
-paragraph. Never put equations inside a diagram; wherever math appears, gloss
-every symbol in plain words. Never include a diagram that needs its own
-explanation. Bold key terms and takeaways, not everything. Paper-agnostic: adapt
-structure and vocabulary (proofs, ablations, cohorts, benchmarks) to the paper
-at hand.
+- **Concise over complete** — every sentence must change what the reviewer
+  knows or does.
+- **Structure by default** — default to whatever structure makes the text
+  skimmable (bullets, labelled lines, mini-tables, schematics) over long
+  paragraphs, in *every* part; reach for connected prose only when the
+  reasoning genuinely needs it, not as the default container.
+- **Example beats paragraph** — in every part, including the critique, an
+  example or sketch beats a dense paragraph.
+- **Diagrams** — never put equations inside a diagram; never include a diagram
+  that needs its own explanation.
+- **Math** — wherever it appears, make it easy to understand.
+- **Bold** key terms and takeaways, not everything.
+- **Paper-agnostic** — adapt structure and vocabulary (proofs, ablations,
+  cohorts, benchmarks) to the paper at hand.
