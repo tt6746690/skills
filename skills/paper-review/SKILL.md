@@ -114,7 +114,9 @@ expand a subtle point, intersperse a small example, mini-table, or schematic,
 and vary length — but not free to wall-of-text. An example or sketch beats a
 dense paragraph; don't pad the simple or compress the subtle.
 
-Severity-order the weaknesses and tag each (🔴 blocking · 🟠 major · 🟡 minor).
+Order **both** strengths and weaknesses most-important-first (just order them —
+no ordering caption in the output). Tag each weakness (🔴 blocking · 🟠 major ·
+🟡 minor) and each strength (🟢 decisive · ⚪ supporting).
 Close with **What would change my rating** (up/down conditions) and **What I
 deliberately do not over-weight** — pre-empt the obvious-but-weak objection and
 explain why the real problem is a *combination*.
@@ -127,12 +129,45 @@ self-disclosed limits; never assert a flaw you can't pin to a page.
 Plain text, no links/emoji/section-IDs, paste-ready. Cover exactly the rubric's
 fields in its order. Write strengths and weaknesses as bullet lists where each
 bullet opens with a few bold lead words then one concise claim+evidence
-sentence — scannable, not prose paragraphs. End with the rating: your
+sentence — scannable, not prose paragraphs. In this section, each bullet and
+paragraph is a single unwrapped line — no newlines inside it, however long
+(literal mid-bullet newlines break when pasted into a form textarea). Order
+strengths and weaknesses most-important-first. End with the rating: your
 recommendation plus the single analysis that would move it, noting the number is
 the reviewer's to set.
 
-Parts 2 and 3 are intentionally redundant (deep vs. submittable). Keep them
-consistent if you revise a point.
+Parts 2 and 3 are intentionally redundant (deep vs. submittable). Sync
+direction is **Part 2 → Part 3**: revise the Part 2 point first, then
+regenerate the affected Part 3 bullet from it. But the reviewer edits Part 3
+directly before submitting — once they have, their Part 3 wording is
+authoritative: never auto-revert it to match Part 2, and fold Part 2 changes
+into it only when explicitly asked. Reviewer-introduced drift is expected and
+fine. Parts 1–2 are the reviewer's private working
+notes (label them so: "for my own reference", "not for submission") — teaching
+expansions and the Q&A belong here and may be verbose; Part 3 is the only
+submitted text and stays lean.
+
+## Reviewer follow-ups (after the first draft)
+
+Reviewing is iterative: the reviewer reads the draft and asks you to explain
+concepts they're unsure of ("educate me on X", "I don't follow Y"). These are
+*clarification* requests, not critique changes. Absorb them without degrading
+the artifact's structure:
+
+- **Clause-sized → inline.** If it fits in a sentence or parenthetical, fix it
+  in place where the concept first appears.
+- **Needs room or spans sections → Q&A.** If it needs a table or multi-point
+  reasoning, or it is load-bearing for several strengths/weaknesses, put it in
+  a **Q&A — concepts I clarified** subsection at the **end of Part 2**, with a
+  one-line inline pointer (`→ Q&A Qn`) where the concept is referenced. The
+  Q&A accumulates across follow-up turns; say it is not for submission.
+- **Part 3 stays last and clean.** The Q&A lives in Part 2 (the non-submitted
+  reasoning) — never below the paste-ready text. Pointers are plain text, not
+  Markdown `#`-anchors (an Obsidian vault will not resolve them).
+- **Critiques stay critiques.** Only *concept clarifications* migrate to the
+  Q&A. A point the reviewer questions about a weakness stays in that weakness;
+  never wedge a multi-point concept primer into the severity-ordered list — it
+  breaks the scannability Part 2 depends on.
 
 ## Generic rubric (fallback when none is found)
 
