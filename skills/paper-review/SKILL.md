@@ -186,12 +186,11 @@ the artifact's structure:
 ## Generic rubric (fallback when none is found)
 
 1. **Brief summary** — 2–5 sentences.
-2. **Scientific soundness** — strengths/weaknesses; are claims substantiated;
-   is it reproducible / are proofs correct.
-3. **Scientific impact** — novelty; potential to influence the field.
-4. **Relevance** — does it address a real problem; fit for the venue/theme.
-5. **Rating** — 1 reject · 2 weak reject · 3 weak accept · 4 accept · 5 strong
+2. **Strengths** — most-important-first.
+3. **Weaknesses** — most-important-first.
+4. **Rating** — 1 reject · 2 weak reject · 3 weak accept · 4 accept · 5 strong
    accept (note if the venue scale differs).
+5. **Justification for the rating** — the single analysis that would move it.
 
 ## Style
 
