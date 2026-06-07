@@ -16,10 +16,10 @@ A git worktree is a separate checkout that shares the repo's history, so you can
 
 ## Setup
 
-**1. Name and create.** Pick a short branch name that describes the work. If you have nothing to go on, make up a memorable three-word name (e.g. `brave-amber-otter`). Don't ask the user to name it.
+**1. Name and create.** Pick a short branch name that describes the work. If you have nothing to go on, make up a memorable three-word name (e.g. `brave-amber-otter`). Don't ask the user to name it. Branch from `main` by default, unless the user says otherwise.
 
 ```bash
-git worktree add .worktrees/<name> -b <name>
+git worktree add .worktrees/<name> -b <name> main
 cd .worktrees/<name>
 ```
 
