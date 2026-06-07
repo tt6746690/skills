@@ -16,7 +16,7 @@ A git worktree is a separate checkout that shares the repo's history, so you can
 
 ## Setup
 
-**1. Name and create.** Pick a short branch name that describes the work. If you have nothing to go on, make up a memorable three-word name (e.g. `brave-amber-otter`). Don't ask the user to name it. Branch from `main` by default, unless the user says otherwise.
+1. **Name and create.** Pick a short branch name that describes the work. If you have nothing to go on, make up a memorable three-word name (e.g. `brave-amber-otter`). Don't ask the user to name it. Branch from `main` by default, unless the user says otherwise.
 
 ```bash
 git worktree add .worktrees/<name> -b <name> main
@@ -25,7 +25,7 @@ cd .worktrees/<name>
 
 Make sure `.worktrees/` is gitignored — add and commit it if not. If that name is already taken, reuse it or pick another.
 
-**2. Prepare the workspace.** Install dependencies and run any project-specific setup. Check the project's docs (`AGENTS.md`, `CLAUDE.md`, `README`, `Makefile`) for the commands — don't assume. If setup creates a symlink or points at data outside the repo, confirm that path is gitignored so it can never be staged.
+2. **Prepare the workspace.** Install dependencies and run any project-specific setup. Check the project's docs (`AGENTS.md`, `CLAUDE.md`, `README`, `Makefile`) for the commands — don't assume. If setup creates a symlink or points at data outside the repo, confirm that path is gitignored so it can never be staged.
 
 ## Working in the worktree
 
