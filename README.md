@@ -63,6 +63,18 @@ Then install the bundled plugin — this makes **all** skills available at once:
 /reload-plugins
 ```
 
+#### Refreshing after edits
+
+Install copies the skills into a commit-pinned cache
+(`~/.claude/plugins/cache/wpq-skills/...`); editing the repo does **not** update
+what Claude Code loads. After committing (HEAD is what's synced), refresh:
+
+```bash
+claude plugin update wpq-skills@wpq-skills   # restart to apply
+```
+
+Use the marketplace-qualified name — bare `wpq-skills` reports "not found".
+
 #### Troubleshooting
 
 **`Plugin "wpq-skills" not found in marketplace "wpq-skills"`**
