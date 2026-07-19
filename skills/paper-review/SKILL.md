@@ -103,9 +103,6 @@ Hard rules:
 - Link external concepts (methods, metrics, datasets) inline at first mention to
   a Wikipedia/arXiv URL — no separate link dump.
 
-(Diagram, math, and bold formatting rules live in the **Style** section below —
-they apply here and in the critique alike.)
-
 ### Part 2 — In-depth review (critique that teaches)
 
 *Goal:* a teaching critique for someone who hasn't read the paper — re-ground
