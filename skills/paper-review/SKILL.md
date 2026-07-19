@@ -36,9 +36,16 @@ here when something else serves understanding better.
    reviewer for an expertise lens or a score up front — proposing those is your
    job. The reviewer may later ask you to rewrite the final section with their
    preferred rating, so write it as a localized, easily-swapped edit.
-4. **Write** `<pdf-stem>_review.md` next to the PDF. If it exists, ask before
+4. **Check novelty when it counts.** If the paper claims a new method or idea and
+   the venue judges originality, do a quick web search for prior and concurrent
+   work before you settle the assessment. Note what overlaps, what is genuinely
+   new, and whether the paper already cites the closest work; keep it in a short
+   "Prior-art check" subsection in Part 2. Stay fair to blind review: don't use
+   search to uncover who the authors are, and don't count a public preprint or
+   blog of the same paper as prior art — only independent work counts.
+5. **Write** `<pdf-stem>_review.md` next to the PDF. If it exists, ask before
    overwriting.
-5. **Flag, don't bury.** Surface points that genuinely need the reviewer's
+6. **Flag, don't bury.** Surface points that genuinely need the reviewer's
    judgment (contentious severity, rating-swing factors, suspected errors) —
    recommend, then let them steer.
 
@@ -61,8 +68,15 @@ Then three parts.
 ### Part 1 — Intuitive overview (teach the paper)
 
 Goal: a reader who has **not** read the paper grasps its core contribution
-quickly. Prefer illustration, structure, and concrete examples over long prose.
-Be concise and skimmable — prefer structure over prose by default.
+quickly. Lead with illustration, structure, and concrete examples over long
+prose.
+
+Pitch it for a domain expert who is short on time, but keep the language plain
+and educational. Common terms of the field can stand on their own; anything
+specific to this paper — a named method, dataset, or piece of notation the
+reader won't know — gets a quick plain-language gloss at first mention. When in
+doubt, explain the idea in plain words first, then name it, and favour a picture
+or example over a dense sentence.
 
 A menu of techniques — use whichever fit this paper, in any order, and **invent
 others when they would help more**:
@@ -192,19 +206,12 @@ the artifact's structure:
    accept (note if the venue scale differs).
 5. **Justification for the rating** — the single analysis that would move it.
 
-## Style
+## Style (applies to every part)
 
-- **Concise over complete** — every sentence must change what the reviewer
+- **Concise over complete** — every sentence should change what the reviewer
   knows or does.
-- **Structure by default** — default to whatever structure makes the text
-  skimmable (bullets, labelled lines, mini-tables, schematics) over long
-  paragraphs, in *every* part; reach for connected prose only when the
-  reasoning genuinely needs it, not as the default container.
-- **Example beats paragraph** — in every part, including the critique, an
-  example or sketch beats a dense paragraph.
-- **Diagrams** — never put equations inside a diagram; never include a diagram
-  that needs its own explanation.
-- **Math** — wherever it appears, make it easy to understand.
-- **Bold** key terms and takeaways, not everything.
-- **Paper-agnostic** — adapt structure and vocabulary (proofs, ablations,
-  cohorts, benchmarks) to the paper at hand.
+- **Structure by default** — reach for bullets, labelled lines, mini-tables, or
+  schematics before long paragraphs; use connected prose only when the reasoning
+  needs it.
+- **Example beats paragraph** — a small example or sketch beats a dense
+  explanation, in the critique as much as in the overview.
