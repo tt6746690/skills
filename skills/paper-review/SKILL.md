@@ -100,14 +100,11 @@ Hard rules:
 - Every empirical or factual claim carries its paper location:
   `[§3.2, p.7](<pdf filename>#page=7)` (relative path survives a moved vault;
   the page anchor jumps the viewer).
-- Schematics carry flow and structure in **plain words** — no equations or bare
-  symbols inside a diagram (they make ASCII art unreadable). Put math in its own
-  Markdown math block, separate from the diagram.
-- Wherever math appears, make it easy to understand — explain what it computes
-  and why, and clarify any notation a reader would stumble on.
 - Link external concepts (methods, metrics, datasets) inline at first mention to
   a Wikipedia/arXiv URL — no separate link dump.
-- Bold key terms and key takeaways — not everything.
+
+(Diagram, math, and bold formatting rules live in the **Style** section below —
+they apply here and in the critique alike.)
 
 ### Part 2 — In-depth review (critique that teaches)
 
@@ -215,3 +212,9 @@ the artifact's structure:
   needs it.
 - **Example beats paragraph** — a small example or sketch beats a dense
   explanation, in the critique as much as in the overview.
+- **Diagrams** — carry flow in plain words; no equations or bare symbols inside
+  (they make ASCII art unreadable), and none that needs its own explanation.
+  Keep any math in its own block, separate from the diagram.
+- **Math** — wherever it appears, make it easy to follow: say what it computes
+  and why, and clarify notation a reader would stumble on.
+- **Bold** key terms and takeaways only — not everything.
